@@ -1,0 +1,831 @@
+
+
+
+/* ----------------------------------------------------
+	GLOBAL / DEFAULTS
+---------------------------------------------------- */
+
+$darkblue: #182b40;
+$blue: #1e3855;
+$red: #c62039;
+
+html {
+	overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'heyzilla';
+    src: url('../fonts/heyzilla_regular-webfont.eot');
+    src: url('../fonts/heyzilla_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/heyzilla_regular-webfont.woff2') format('woff2'),
+         url('../fonts/heyzilla_regular-webfont.woff') format('woff'),
+         url('../fonts/heyzilla_regular-webfont.ttf') format('truetype'),
+         url('../fonts/heyzilla_regular-webfont.svg#heyzilla') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nabila';
+    src: url('../fonts/nabila-webfont.eot');
+    src: url('../fonts/nabila-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nabila-webfont.woff2') format('woff2'),
+         url('../fonts/nabila-webfont.woff') format('woff'),
+         url('../fonts/nabila-webfont.ttf') format('truetype'),
+         url('../fonts/nabila-webfont.svg#nabila') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jack';
+    src: url('../fonts/jacknew-webfont.eot');
+    src: url('../fonts/jacknew-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/jacknew-webfont.woff2') format('woff2'),
+         url('../fonts/jacknew-webfont.woff') format('woff'),
+         url('../fonts/jacknew-webfont.ttf') format('truetype'),
+         url('../fonts/jacknew-webfont.svg#jack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: url(../images/bg.jpg);
+	background-size: cover;
+	font: 100% Roboto;
+}
+
+.container {
+	width: 100%;
+	max-width: 835px;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+a img {
+	border: none;
+}
+
+
+
+/* ----------------------------------------------------
+	Top Bar
+---------------------------------------------------- */
+
+.top-bar {
+	background: #fff;
+	text-align: left;
+	position: relative;
+	z-index: 900;
+	border-bottom: 1px solid rgba($blue, .3);
+
+	@media screen and (min-width: 380px) {
+		text-align: center;
+	}
+
+}
+
+.top-bar .container {
+	position: relative;
+}
+
+.holly {
+	position: absolute;
+	right: 0;
+	top: 0;
+	max-width: 100px;
+
+	@media screen and (min-width: 380px) {
+		left: 0;
+	}
+
+	@media screen and (min-width: 1050px) {
+		max-width: 100%;
+		left: -180px;
+	}
+
+}
+
+.logo {
+	display: block;
+
+	@media screen and (min-width: 380px) {
+		display: inline;
+	}
+
+	@media screen and (min-width: 760px) {
+		float: left;
+		margin-left: 90px;
+	}
+
+	@media screen and (min-width: 1050px) {
+		margin-left: 0;
+	}
+
+}
+
+.social-btns {
+	border-top: 1px solid rgba(#fff, .1);
+	background: #1b2a46;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 14px 20px;
+
+	@media screen and (min-width: 380px) {
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	@media screen and (min-width: 760px) {
+		float: right;
+		padding: 26px 0;
+		background: transparent;
+		border: none;
+		margin-right: 15px;
+	}
+
+	@media screen and (min-width: 860px) {
+		margin-right: 0;
+	}
+
+}
+
+.twitter-share-button,
+.fb-like,
+.g-plusone {
+	display: inline-block;
+	margin: 0 7px 0 0;
+
+	@media screen and (min-width: 380px) {
+		margin: 0 7px;
+	}
+
+}
+
+.embed {
+	display: none;
+	cursor: pointer;
+	position: relative;
+	font-size: .8em;
+
+	@media screen and (min-width: 520px) {
+		display: inline-block;
+	}
+
+}
+
+.embed p {
+	padding: 4px 10px;
+	background: #009fe3;
+	color: #fff;
+}
+
+.embed p:hover {
+	opacity: .9;
+}
+
+.embed textarea {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	width: 200px;
+	height: 100px;
+	z-index: 900;
+	padding: 10px;
+	border: 3px solid #888;
+	margin-left: -100px;
+}
+
+
+
+/* ----------------------------------------------------
+	Intro
+---------------------------------------------------- */
+
+.intro {
+	text-align: center;
+	font-size: .9em;
+	font-weight: 300;
+	position: relative;
+	z-index: 2;
+
+	.container {
+		background: #fff;
+		color: $darkblue;
+		border: 2px dashed $darkblue;
+		border-left: none;
+		border-right: none;
+		padding: 20px;
+		margin-top: 30px;
+		line-height: 1.5;
+
+		@media screen and (min-width: 850px) {
+			border: 2px dashed $darkblue;
+		}
+
+	}
+
+	h1 {
+		margin-bottom: 20px;
+		font-weight: 500;
+		font-size: 1.6em;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	a {
+		color: #1eb4f9;
+	}
+
+}
+
+
+
+/* ----------------------------------------------------
+	CALENDAR
+---------------------------------------------------- */
+
+h2 {
+	font: 5em nabila;
+
+	span {
+		font: 1em heyzilla;
+	}
+
+}
+
+.calendar {
+	margin-top: 30px;
+	position: relative;
+	z-index: 800;
+}
+
+.calendar .container {
+	position: relative;
+}
+
+.head {
+	background: #1e3855;
+	text-align: center;
+	color: #fff;
+	position: relative;
+}
+
+.santa, .snowman {
+	display: none;
+	position: absolute;
+	bottom: -1px;
+	left: 10px;
+
+	@media screen and (min-width: 550px) {
+		display: block;
+	}
+
+}
+
+.santa {
+
+	@media screen and (min-width: 720px) {
+		left: 40px;
+	}
+
+	@media screen and (min-width: 900px) {
+		left: 55px;
+	}
+
+}
+
+.snowman {
+	left: auto;
+	right: 10px;
+
+	@media screen and (min-width: 720px) {
+		right: 40px;
+	}
+
+	@media screen and (min-width: 900px) {
+		right: 55px;
+	}
+
+}
+
+.doors {
+	border-top: 1px solid #2b4767;
+}
+
+.doors li {
+	width: 50%;
+	list-style: none;
+	float: left;
+	background: $blue;
+	color: #fff;
+	position: relative;
+	-webkit-perspective: 700px;
+    perspective: 700px;
+
+    &.hovered {
+    	position: relative;
+    	z-index: 500;
+    }
+
+	&:hover .door {
+		-webkit-transform: rotateY(-100deg);
+		transform: rotateY(-100deg);
+		background: #999;
+	}
+
+	@media screen and (min-width: 400px) {
+		width: 33.333333%;
+	}
+
+	@media screen and (min-width: 520px) {
+		width: 25%;
+	}
+
+	@media screen and (min-width: 620px) {
+		width: 20%;
+	}
+
+}
+
+.door {
+	-webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: center left;
+    -webkit-transition: .5s;
+    transform-style: preserve-3d;
+    transform-origin: center left;
+    transition: .5s;
+    position: relative;
+    z-index: 100;
+}
+
+.door-back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&.red { background: darken(#ce0f0f, 5%); }
+	&.purple { background: darken(#6d0fce, 5%); }
+	&.blue { background: darken(#119dde, 5%); }
+	&.yellow { background: darken(#ffcf10, 5%); }
+	&.pink { background: darken(#ff10e0, 5%); }
+
+}
+
+.door-front {
+	position: relative;
+	z-index: 10;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: block;
+	width: 100%;
+}
+
+.inside {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 30px 17px;
+	font-size: 1.1em;
+	font-weight: 300;
+	cursor: pointer;
+
+	span {
+		font: 1.3em jack;
+		display: block;
+		margin: 10px 0;
+		width: 100%;
+	}
+
+	.btn {
+		background: $red;
+		padding: 5px 10px;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: .9em;
+		margin-top: 20px;
+		display: block;
+		cursor: pointer;
+
+		&:hover {
+			background: lighten($red, 5%);
+		}
+
+	}
+
+	@media screen and (min-width: 400px) {
+		font-size: 1em;
+		padding: 20px 15px;
+		
+		span {
+			font-size: 1.1em;
+		}
+
+		.btn {
+			font-size: .8em;
+			margin-top: 15px;
+		}
+
+	}
+
+	@media screen and (min-width: 720px) {
+		padding: 20px 13px;
+		
+		span {
+			font-size: 1.4em;
+		}
+
+		.btn {
+			font-size: .9em;
+			margin-top: 20px;
+		}
+
+	}
+
+	@media screen and (min-width: 900px) {
+		padding: 25px 15px;
+		font-size: 1.1em;
+	}
+
+}
+
+
+
+/* ----------------------------------------------------
+	GIFT OVERLAYS
+---------------------------------------------------- */
+
+.gift-block {
+	position: absolute;
+	top: 142px;
+	left: 0;
+	background: #fff;
+	z-index: 900;
+	margin: 10px;
+	padding: 20px;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateY(-800px);
+	transform: translateY(-800px);
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	-webkit-transition: .4s;
+	transition: .4s;
+
+	&.show {
+		width: -webkit-calc(100% - 20px);
+		width: calc(100% - 20px);
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	.social-btns {
+		padding: 25px 0 5px;
+	}
+
+	.heading {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	h3 {
+		background: $blue;
+		padding: 20px;
+		color: #fff;
+		font-weight: 300;
+		float: left;
+		width: 60%;
+	}
+
+	.head-price {
+		font: 1em jack;
+		display: block;
+		margin-top: 10px;
+
+		@media screen and (min-width: 480px) {
+			display: inline;
+			margin-top: 0;
+		}
+
+	}
+
+	.fa-gift {
+		font-size: 1.3em;
+	}
+
+	.back {
+		background: $red;
+		float: left;
+		width: 40%;
+		padding: 15px;
+		color: #fff;
+		font-weight: 300;
+		text-transform: uppercase;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		cursor: pointer;
+		clear: right;
+
+		&:hover {
+			background: lighten($red, 5%);
+		}
+
+		.fa {
+			margin-right: 10px;
+		}
+
+	}
+
+	h4 {
+		color: $blue;
+		font-weight: 300;
+		font-size: 1.9em;
+
+		span {
+			font-weight: 900;
+		}
+
+	}
+
+	p {
+		font-weight: 300;
+		color: $blue;
+		font-size: .95em;
+		-ms-flex: 0 1 auto;
+		max-width: 100%;
+	}
+
+	.price {
+		font-weight: 900;
+		font-size: 1.7em;
+	}
+
+	.cta {
+		color: #fff;
+		background: $red;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 10px 18px;
+		font-size: .95em;
+		font-weight: 500;
+		display: inline-block;
+
+		&:hover {
+			background: lighten($red, 5%);
+		}
+
+		.fa {
+			font-size: 1.2em;
+			margin-left: 10px;
+		}
+
+	}
+
+	@media screen and (min-width: 680px) {
+
+		&.show {
+			min-height: -webkit-calc(100% - 162px);
+			min-height: calc(100% - 162px);
+		}
+
+	}
+
+}
+
+.cols-wrap {
+	clear: both;
+
+	@media screen and (min-width: 680px) {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+}
+
+.kids, .him, .her {
+	float: left;
+	width: 100%;
+	margin: 15px 0;
+	text-align: center;
+	padding-bottom: 30px;
+	border-bottom: 1px dashed lighten($blue, 50%);
+
+	> * + * {
+		margin-top: 10px;
+	}
+
+	@media screen and (min-width: 680px) {
+		width: 30%;
+		margin-right: 4%;
+		border-bottom: none;
+		text-align: left;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+
+		p {
+			margin: 15px 0;
+		}
+
+		.price {
+			margin-top: auto;
+			margin-bottom: 5px;
+		}
+
+	}
+
+}
+
+.her {
+
+	@media screen and (min-width: 680px) {
+		margin-right: 0;
+	}
+
+}
+
+.close {
+	width: 100%;
+	float: left;
+	background: $darkblue;
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 10px;
+
+	&:hover {
+		opacity: .9;
+	}
+
+	.fa {
+		margin-right: 15px;
+	}
+
+}
+
+
+
+/* ----------------------------------------------------
+	FOOTER
+---------------------------------------------------- */
+
+footer {
+	float: left;
+	margin-top: 50px;
+	position: relative;
+	width: 100%;
+	min-height: 240px;
+	text-align: center;
+
+	img {
+		display: block;
+	}
+
+	@media screen and (min-width: 720px) {
+		margin-top: 10px;
+	}
+
+	@media screen and (min-width: 1000px) {
+		margin-top: -50px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-top: -300px;
+	}
+
+	@media screen and (min-width: 1300px) {
+		margin-top: -340px;
+	}
+
+	@media screen and (min-width: 1500px) {
+		margin-top: -370px;
+	}
+
+}
+
+.bg-scene {
+	margin-bottom: -87px;
+	display: inline-block;
+	position: relative;
+	z-index: 50;
+}
+
+.hills-wrap {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	display: none;
+
+	@media screen and (min-width: 1500px) {
+		display: block;
+	}
+
+}
+
+.hills-bg {
+	display: block;
+	width: auto;
+	max-width: none;
+	position: relative;
+	left: 50%;
+	margin-left: -1550px;
+}
+
+.snow-wrap {
+	width: 100%;
+	overflow: hidden;
+}
+
+.snow {
+	display: block;
+	width: auto;
+	max-width: none;
+	position: relative;
+	left: 50%;
+	margin-left: -1550px;
+	z-index: 100;
+}
+
+.logo-wrap {
+	text-align: center;
+	padding-bottom: 30px;
+	position: absolute;
+	bottom: 0;
+	z-index: 120;
+	width: 100%;
+}
+
+.footer-logo {
+	display: inline-block;
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
